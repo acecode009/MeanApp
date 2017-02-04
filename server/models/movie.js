@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 
 //create schema for movie
-var movieSchema = neq mongoose.Schema({
+var movieSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true

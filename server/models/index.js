@@ -1,4 +1,4 @@
-modules.exports = {
+module.exports = {
     
-    movie: require('./movies.js');
+    movie: require('./movie.js')
 }
