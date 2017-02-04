@@ -15,12 +15,19 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 
 //CORS Support
-app.use(function(rq,res,next){
+app.use(function(req,res,next){
     res.header('Access-Control-Allow-Origin', '*')
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-headers', 'Content-Type');
     next();
+    
+});
+app.use('/hello',function(req,res,next){
+    res.send("Hello World!");
+    next();
 })
+
+
 //connect to mongoDB
 mongoose.connect('mongodb://localhost/meanapp');
 mongoose.connection.once('open', function(){
