@@ -3,7 +3,7 @@ var restful = require('node-restful');
 module.exports = function(app,route){
     
     //setup the controller
-    var rest = resful.model(
+    var rest = restful.model(
         'movie',
         app.models.movie
     ).methods(['get','put','post','delete']);
